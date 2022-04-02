@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ServerHub = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local head = Instance.new("Frame")
@@ -24,6 +29,7 @@ local UICorner_9 = Instance.new("UICorner")
 local Toggle = Instance.new("Frame")
 local ImageButton = Instance.new("ImageButton")
 
+
 --Properties:
 
 ServerHub.Name = "ServerHub"
@@ -37,6 +43,12 @@ Main.BorderColor3 = Color3.fromRGB(170, 170, 255)
 Main.BorderSizePixel = 4
 Main.Position = UDim2.new(0.315711081, 0, 0.334969342, 0)
 Main.Size = UDim2.new(0, 731, 0, 403)
+Main.KeyDown:connect(function(key)
+	if key:lower() == "n" or key:upper() == "N" then
+		Main.Visible = true
+Main.KeyDown:connect(function(key)
+	if key:lower() == "m" or key:upper() == "M" then
+		Main.Visible = false
 
 head.Name = "head"
 head.Parent = Main
@@ -44,14 +56,17 @@ head.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 head.BorderColor3 = Color3.fromRGB(170, 170, 255)
 head.Position = UDim2.new(-0.00341997296, 0, -0.00617594738, 0)
 head.Size = UDim2.new(0, 729, 0, 36)
+head.Active = true				
+head.Draggable = true
+				
 
 NAME.Name = "NAME"
 NAME.Parent = head
 NAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 NAME.BackgroundTransparency = 1.000
-NAME.Position = UDim2.new(0.0576131716, 0, 0, 0)
-NAME.Size = UDim2.new(0, 111, 0, 36)
-NAME.Font = Enum.Font.PermanentMarker
+NAME.Position = UDim2.new(0.0576131679, 0, 0, 0)
+NAME.Size = UDim2.new(0, 133, 0, 36)
+NAME.Font = Enum.Font.ArialBold
 NAME.Text = "SERVER X HUB"
 NAME.TextColor3 = Color3.fromRGB(0, 0, 0)
 NAME.TextScaled = true
@@ -81,7 +96,7 @@ AutoFarm.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 AutoFarm.BorderColor3 = Color3.fromRGB(170, 170, 255)
 AutoFarm.Position = UDim2.new(0.0584128052, 0, 0.0308646634, 0)
 AutoFarm.Size = UDim2.new(0, 117, 0, 29)
-AutoFarm.Font = Enum.Font.PermanentMarker
+AutoFarm.Font = Enum.Font.ArialBold
 AutoFarm.Text = "Auto Farm"
 AutoFarm.TextColor3 = Color3.fromRGB(0, 0, 0)
 AutoFarm.TextScaled = true
@@ -96,7 +111,7 @@ Stats.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 Stats.BorderColor3 = Color3.fromRGB(170, 170, 255)
 Stats.Position = UDim2.new(0.0584128052, 0, 0.139856488, 0)
 Stats.Size = UDim2.new(0, 117, 0, 29)
-Stats.Font = Enum.Font.PermanentMarker
+Stats.Font = Enum.Font.ArialBold
 Stats.Text = "Stats"
 Stats.TextColor3 = Color3.fromRGB(0, 0, 0)
 Stats.TextScaled = true
@@ -111,7 +126,7 @@ DevilFruit.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 DevilFruit.BorderColor3 = Color3.fromRGB(170, 170, 255)
 DevilFruit.Position = UDim2.new(0.0584128052, 0, 0.349665761, 0)
 DevilFruit.Size = UDim2.new(0, 117, 0, 29)
-DevilFruit.Font = Enum.Font.PermanentMarker
+DevilFruit.Font = Enum.Font.ArialBold
 DevilFruit.Text = "Devil Fruit"
 DevilFruit.TextColor3 = Color3.fromRGB(0, 0, 0)
 DevilFruit.TextScaled = true
@@ -126,7 +141,7 @@ Teleport.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 Teleport.BorderColor3 = Color3.fromRGB(170, 170, 255)
 Teleport.Position = UDim2.new(0.0584128052, 0, 0.240673929, 0)
 Teleport.Size = UDim2.new(0, 117, 0, 29)
-Teleport.Font = Enum.Font.PermanentMarker
+Teleport.Font = Enum.Font.ArialBold
 Teleport.Text = "Teleport"
 Teleport.TextColor3 = Color3.fromRGB(0, 0, 0)
 Teleport.TextScaled = true
@@ -141,7 +156,7 @@ Setting.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 Setting.BorderColor3 = Color3.fromRGB(170, 170, 255)
 Setting.Position = UDim2.new(0.0584128052, 0, 0.66574204, 0)
 Setting.Size = UDim2.new(0, 117, 0, 29)
-Setting.Font = Enum.Font.PermanentMarker
+Setting.Font = Enum.Font.ArialBold
 Setting.Text = "Settings"
 Setting.TextColor3 = Color3.fromRGB(0, 0, 0)
 Setting.TextScaled = true
@@ -156,7 +171,8 @@ Dev.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 Dev.BorderColor3 = Color3.fromRGB(170, 170, 255)
 Dev.Position = UDim2.new(0.0584128052, 0, 0.774733901, 0)
 Dev.Size = UDim2.new(0, 117, 0, 29)
-Dev.Font = Enum.Font.PermanentMarker
+Dev.Font = Enum.Font.ArialBold
+Dev.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
 Dev.Text = "Dev"
 Dev.TextColor3 = Color3.fromRGB(0, 0, 0)
 Dev.TextScaled = true
@@ -171,7 +187,7 @@ Team.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 Team.BorderColor3 = Color3.fromRGB(170, 170, 255)
 Team.Position = UDim2.new(0.0584128052, 0, 0.564924598, 0)
 Team.Size = UDim2.new(0, 117, 0, 29)
-Team.Font = Enum.Font.PermanentMarker
+Team.Font = Enum.Font.ArialBold
 Team.Text = "Team"
 Team.TextColor3 = Color3.fromRGB(0, 0, 0)
 Team.TextScaled = true
@@ -186,7 +202,7 @@ Misc.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 Misc.BorderColor3 = Color3.fromRGB(170, 170, 255)
 Misc.Position = UDim2.new(0.0584128052, 0, 0.455932766, 0)
 Misc.Size = UDim2.new(0, 117, 0, 29)
-Misc.Font = Enum.Font.PermanentMarker
+Misc.Font = Enum.Font.ArialBold
 Misc.Text = "Misc"
 Misc.TextColor3 = Color3.fromRGB(0, 0, 0)
 Misc.TextScaled = true
