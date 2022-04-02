@@ -1,0 +1,207 @@
+local ServerHub = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local head = Instance.new("Frame")
+local NAME = Instance.new("TextLabel")
+local LOGO = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local Menu = Instance.new("Frame")
+local AutoFarm = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local Stats = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local DevilFruit = Instance.new("TextBox")
+local UICorner_4 = Instance.new("UICorner")
+local Teleport = Instance.new("TextBox")
+local UICorner_5 = Instance.new("UICorner")
+local Setting = Instance.new("TextBox")
+local UICorner_6 = Instance.new("UICorner")
+local Dev = Instance.new("TextBox")
+local UICorner_7 = Instance.new("UICorner")
+local Team = Instance.new("TextBox")
+local UICorner_8 = Instance.new("UICorner")
+local Misc = Instance.new("TextBox")
+local UICorner_9 = Instance.new("UICorner")
+local Toggle = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
+
+--Properties:
+
+ServerHub.Name = "ServerHub"
+ServerHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ServerHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ServerHub
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Main.BorderSizePixel = 4
+Main.Position = UDim2.new(0.315711081, 0, 0.334969342, 0)
+Main.Size = UDim2.new(0, 731, 0, 403)
+
+head.Name = "head"
+head.Parent = Main
+head.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+head.BorderColor3 = Color3.fromRGB(170, 170, 255)
+head.Position = UDim2.new(-0.00341997296, 0, -0.00617594738, 0)
+head.Size = UDim2.new(0, 729, 0, 36)
+
+NAME.Name = "NAME"
+NAME.Parent = head
+NAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NAME.BackgroundTransparency = 1.000
+NAME.Position = UDim2.new(0.0576131716, 0, 0, 0)
+NAME.Size = UDim2.new(0, 111, 0, 36)
+NAME.Font = Enum.Font.PermanentMarker
+NAME.Text = "SERVER X HUB"
+NAME.TextColor3 = Color3.fromRGB(0, 0, 0)
+NAME.TextScaled = true
+NAME.TextSize = 14.000
+NAME.TextWrapped = true
+
+LOGO.Name = "LOGO"
+LOGO.Parent = head
+LOGO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LOGO.Size = UDim2.new(0, 36, 0, 36)
+LOGO.Image = "http://www.roblox.com/asset/?id=9261490646"
+
+UICorner.CornerRadius = UDim.new(0, 100)
+UICorner.Parent = LOGO
+
+Menu.Name = "Menu"
+Menu.Parent = Main
+Menu.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Menu.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Menu.BorderSizePixel = 4
+Menu.Position = UDim2.new(-0.00277998019, 0, 0.0843668655, 0)
+Menu.Size = UDim2.new(0, 141, 0, 367)
+
+AutoFarm.Name = "Auto Farm"
+AutoFarm.Parent = Menu
+AutoFarm.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+AutoFarm.BorderColor3 = Color3.fromRGB(170, 170, 255)
+AutoFarm.Position = UDim2.new(0.0584128052, 0, 0.0308646634, 0)
+AutoFarm.Size = UDim2.new(0, 117, 0, 29)
+AutoFarm.Font = Enum.Font.PermanentMarker
+AutoFarm.Text = "Auto Farm"
+AutoFarm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoFarm.TextScaled = true
+AutoFarm.TextSize = 14.000
+AutoFarm.TextWrapped = true
+
+UICorner_2.Parent = AutoFarm
+
+Stats.Name = "Stats"
+Stats.Parent = Menu
+Stats.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+Stats.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Stats.Position = UDim2.new(0.0584128052, 0, 0.139856488, 0)
+Stats.Size = UDim2.new(0, 117, 0, 29)
+Stats.Font = Enum.Font.PermanentMarker
+Stats.Text = "Stats"
+Stats.TextColor3 = Color3.fromRGB(0, 0, 0)
+Stats.TextScaled = true
+Stats.TextSize = 14.000
+Stats.TextWrapped = true
+
+UICorner_3.Parent = Stats
+
+DevilFruit.Name = "Devil Fruit"
+DevilFruit.Parent = Menu
+DevilFruit.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+DevilFruit.BorderColor3 = Color3.fromRGB(170, 170, 255)
+DevilFruit.Position = UDim2.new(0.0584128052, 0, 0.349665761, 0)
+DevilFruit.Size = UDim2.new(0, 117, 0, 29)
+DevilFruit.Font = Enum.Font.PermanentMarker
+DevilFruit.Text = "Devil Fruit"
+DevilFruit.TextColor3 = Color3.fromRGB(0, 0, 0)
+DevilFruit.TextScaled = true
+DevilFruit.TextSize = 14.000
+DevilFruit.TextWrapped = true
+
+UICorner_4.Parent = DevilFruit
+
+Teleport.Name = "Teleport"
+Teleport.Parent = Menu
+Teleport.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+Teleport.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Teleport.Position = UDim2.new(0.0584128052, 0, 0.240673929, 0)
+Teleport.Size = UDim2.new(0, 117, 0, 29)
+Teleport.Font = Enum.Font.PermanentMarker
+Teleport.Text = "Teleport"
+Teleport.TextColor3 = Color3.fromRGB(0, 0, 0)
+Teleport.TextScaled = true
+Teleport.TextSize = 14.000
+Teleport.TextWrapped = true
+
+UICorner_5.Parent = Teleport
+
+Setting.Name = "Setting"
+Setting.Parent = Menu
+Setting.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+Setting.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Setting.Position = UDim2.new(0.0584128052, 0, 0.66574204, 0)
+Setting.Size = UDim2.new(0, 117, 0, 29)
+Setting.Font = Enum.Font.PermanentMarker
+Setting.Text = "Settings"
+Setting.TextColor3 = Color3.fromRGB(0, 0, 0)
+Setting.TextScaled = true
+Setting.TextSize = 14.000
+Setting.TextWrapped = true
+
+UICorner_6.Parent = Setting
+
+Dev.Name = "Dev"
+Dev.Parent = Menu
+Dev.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+Dev.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Dev.Position = UDim2.new(0.0584128052, 0, 0.774733901, 0)
+Dev.Size = UDim2.new(0, 117, 0, 29)
+Dev.Font = Enum.Font.PermanentMarker
+Dev.Text = "Dev"
+Dev.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dev.TextScaled = true
+Dev.TextSize = 14.000
+Dev.TextWrapped = true
+
+UICorner_7.Parent = Dev
+
+Team.Name = "Team"
+Team.Parent = Menu
+Team.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+Team.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Team.Position = UDim2.new(0.0584128052, 0, 0.564924598, 0)
+Team.Size = UDim2.new(0, 117, 0, 29)
+Team.Font = Enum.Font.PermanentMarker
+Team.Text = "Team"
+Team.TextColor3 = Color3.fromRGB(0, 0, 0)
+Team.TextScaled = true
+Team.TextSize = 14.000
+Team.TextWrapped = true
+
+UICorner_8.Parent = Team
+
+Misc.Name = "Misc"
+Misc.Parent = Menu
+Misc.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+Misc.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Misc.Position = UDim2.new(0.0584128052, 0, 0.455932766, 0)
+Misc.Size = UDim2.new(0, 117, 0, 29)
+Misc.Font = Enum.Font.PermanentMarker
+Misc.Text = "Misc"
+Misc.TextColor3 = Color3.fromRGB(0, 0, 0)
+Misc.TextScaled = true
+Misc.TextSize = 14.000
+Misc.TextWrapped = true
+
+UICorner_9.Parent = Misc
+
+Toggle.Name = "Toggle"
+Toggle.Parent = Main
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.Position = UDim2.new(-0.488372087, 0, -0.401985109, 0)
+Toggle.Size = UDim2.new(0, 100, 0, 100)
+
+ImageButton.Parent = Toggle
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.Size = UDim2.new(0, 100, 0, 100)
+ImageButton.Image = "http://www.roblox.com/asset/?id=9261490646"
