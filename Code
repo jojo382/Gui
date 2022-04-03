@@ -26,9 +26,29 @@ local Team = Instance.new("TextBox")
 local UICorner_8 = Instance.new("UICorner")
 local Misc = Instance.new("TextBox")
 local UICorner_9 = Instance.new("UICorner")
-local Toggle = Instance.new("Frame")
-local ImageButton = Instance.new("ImageButton")
-
+local page = Instance.new("Frame")
+local autofarm = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local stats = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local Team_2 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local teleport = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local devilfruit = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local Misc_2 = Instance.new("Frame")
+local TextLabel_6 = Instance.new("TextLabel")
+local Settings = Instance.new("Frame")
+local TextLabel_7 = Instance.new("TextLabel")
+local dev = Instance.new("Frame")
+local TextLabel_8 = Instance.new("TextLabel")
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title    = "Server X Hub",
+	Text     = "Loading...",
+	Duration = 4,
+})
+wait(2)
 
 --Properties:
 
@@ -41,24 +61,15 @@ Main.Parent = ServerHub
 Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderColor3 = Color3.fromRGB(170, 170, 255)
 Main.BorderSizePixel = 4
-Main.Position = UDim2.new(0.315711081, 0, 0.334969342, 0)
+Main.Position = UDim2.new(0.303211093, 0, 0.305339694, 0)
 Main.Size = UDim2.new(0, 731, 0, 403)
-Main.KeyDown:connect(function(key)
-	if key:lower() == "n" or key:upper() == "N" then
-		Main.Visible = true
-Main.KeyDown:connect(function(key)
-	if key:lower() == "m" or key:upper() == "M" then
-		Main.Visible = false
 
 head.Name = "head"
 head.Parent = Main
 head.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 head.BorderColor3 = Color3.fromRGB(170, 170, 255)
-head.Position = UDim2.new(-0.00341997296, 0, -0.00617594738, 0)
-head.Size = UDim2.new(0, 729, 0, 36)
-head.Active = true				
-head.Draggable = true
-				
+head.Position = UDim2.new(-0.000665291562, 0, -0.00115186814, 0)
+head.Size = UDim2.new(0, 733, 0, 36)
 
 NAME.Name = "NAME"
 NAME.Parent = head
@@ -102,6 +113,17 @@ AutoFarm.TextColor3 = Color3.fromRGB(0, 0, 0)
 AutoFarm.TextScaled = true
 AutoFarm.TextSize = 14.000
 AutoFarm.TextWrapped = true
+AutoFarm.MouseButton1Down:connect(function()
+	script.Parent.Parent.page.autofarm.Visible = true
+	script.Parent.Parent.page.teleport.Visible = false
+	script.Parent.Parent.page.Misc.Visible = false
+	script.Parent.Parent.page.devilfruit.Visible = false
+	script.Parent.Parent.page.stats.Visible = false
+	script.Parent.Parent.page.Team.Visible = false
+	script.Parent.Parent.page.Setting.Visible = false
+	script.Parent.Parent.page.dev.Visible = false
+	wait(0.1)
+end)
 
 UICorner_2.Parent = AutoFarm
 
@@ -117,6 +139,17 @@ Stats.TextColor3 = Color3.fromRGB(0, 0, 0)
 Stats.TextScaled = true
 Stats.TextSize = 14.000
 Stats.TextWrapped = true
+Stats.MouseButton1Down:connect(function()
+	script.Parent.Parent.page.autofarm.Visible = false
+	script.Parent.Parent.page.teleport.Visible = false
+	script.Parent.Parent.page.Misc.Visible = false
+	script.Parent.Parent.page.devilfruit.Visible = false
+	script.Parent.Parent.page.stats.Visible = true
+	script.Parent.Parent.page.Team.Visible = false
+	script.Parent.Parent.page.Setting.Visible = false
+	script.Parent.Parent.page.dev.Visible = false
+	wait(0.1)
+end)
 
 UICorner_3.Parent = Stats
 
@@ -132,6 +165,17 @@ DevilFruit.TextColor3 = Color3.fromRGB(0, 0, 0)
 DevilFruit.TextScaled = true
 DevilFruit.TextSize = 14.000
 DevilFruit.TextWrapped = true
+DevilFruit.MouseButton1Down:connect(function()
+	script.Parent.Parent.page.autofarm.Visible = false
+	script.Parent.Parent.page.teleport.Visible = false
+	script.Parent.Parent.page.Misc.Visible = false
+	script.Parent.Parent.page.devilfruit.Visible = true
+	script.Parent.Parent.page.stats.Visible = false
+	script.Parent.Parent.page.Team.Visible = false
+	script.Parent.Parent.page.Setting.Visible = false
+	script.Parent.Parent.page.dev.Visible = false
+	wait(0.1)
+end)
 
 UICorner_4.Parent = DevilFruit
 
@@ -147,6 +191,17 @@ Teleport.TextColor3 = Color3.fromRGB(0, 0, 0)
 Teleport.TextScaled = true
 Teleport.TextSize = 14.000
 Teleport.TextWrapped = true
+Teleport.MouseButton1Down:connect(function()
+	script.Parent.Parent.page.autofarm.Visible = false
+	script.Parent.Parent.page.teleport.Visible = true
+	script.Parent.Parent.page.Misc.Visible = false
+	script.Parent.Parent.page.devilfruit.Visible = false
+	script.Parent.Parent.page.stats.Visible = false
+	script.Parent.Parent.page.Team.Visible = false
+	script.Parent.Parent.page.Setting.Visible = false
+	script.Parent.Parent.page.dev.Visible = false
+	wait(0.1)
+end)
 
 UICorner_5.Parent = Teleport
 
@@ -162,6 +217,17 @@ Setting.TextColor3 = Color3.fromRGB(0, 0, 0)
 Setting.TextScaled = true
 Setting.TextSize = 14.000
 Setting.TextWrapped = true
+Setting.MouseButton1Down:connect(function()
+	script.Parent.Parent.page.autofarm.Visible = false
+	script.Parent.Parent.page.teleport.Visible = false
+	script.Parent.Parent.page.Misc.Visible = false
+	script.Parent.Parent.page.devilfruit.Visible = false
+	script.Parent.Parent.page.stats.Visible = false
+	script.Parent.Parent.page.Team.Visible = false
+	script.Parent.Parent.page.Setting.Visible = true
+	script.Parent.Parent.page.dev.Visible = false
+	wait(0.1)
+end)
 
 UICorner_6.Parent = Setting
 
@@ -178,6 +244,17 @@ Dev.TextColor3 = Color3.fromRGB(0, 0, 0)
 Dev.TextScaled = true
 Dev.TextSize = 14.000
 Dev.TextWrapped = true
+Dev.MouseButton1Down:connect(function()
+	script.Parent.Parent.page.autofarm.Visible = false
+	script.Parent.Parent.page.teleport.Visible = false
+	script.Parent.Parent.page.Misc.Visible = false
+	script.Parent.Parent.page.devilfruit.Visible = false
+	script.Parent.Parent.page.stats.Visible = false
+	script.Parent.Parent.page.Team.Visible = false
+	script.Parent.Parent.page.Setting.Visible = false
+	script.Parent.Parent.page.dev.Visible = true
+	wait(0.1)
+end)
 
 UICorner_7.Parent = Dev
 
@@ -192,7 +269,18 @@ Team.Text = "Team"
 Team.TextColor3 = Color3.fromRGB(0, 0, 0)
 Team.TextScaled = true
 Team.TextSize = 14.000
-Team.TextWrapped = true
+Team.TextWrapped = true	
+Team.MouseButton1Down:connect(function()
+	script.Parent.Parent.page.autofarm.Visible = false
+	script.Parent.Parent.page.teleport.Visible = false
+	script.Parent.Parent.page.Misc.Visible = false
+	script.Parent.Parent.page.devilfruit.Visible = false
+	script.Parent.Parent.page.stats.Visible = false
+	script.Parent.Parent.page.Team.Visible = true
+	script.Parent.Parent.page.Setting.Visible = false
+	script.Parent.Parent.page.dev.Visible = false
+	wait(0.1)
+end)
 
 UICorner_8.Parent = Team
 
@@ -208,16 +296,195 @@ Misc.TextColor3 = Color3.fromRGB(0, 0, 0)
 Misc.TextScaled = true
 Misc.TextSize = 14.000
 Misc.TextWrapped = true
+Misc.MouseButton1Down:connect(function()
+	script.Parent.Parent.page.autofarm.Visible = false
+	script.Parent.Parent.page.teleport.Visible = false
+	script.Parent.Parent.page.Misc.Visible = true
+	script.Parent.Parent.page.devilfruit.Visible = false
+	script.Parent.Parent.page.stats.Visible = false
+	script.Parent.Parent.page.Team.Visible = false
+	script.Parent.Parent.page.Setting.Visible = false
+	script.Parent.Parent.page.dev.Visible = false
+	wait(0.1)
+end)
 
 UICorner_9.Parent = Misc
 
-Toggle.Name = "Toggle"
-Toggle.Parent = Main
-Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle.Position = UDim2.new(-0.488372087, 0, -0.401985109, 0)
-Toggle.Size = UDim2.new(0, 100, 0, 100)
+page.Name = "page"
+page.Parent = Main
+page.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+page.BorderColor3 = Color3.fromRGB(170, 170, 255)
+page.BorderSizePixel = 4
+page.Position = UDim2.new(0.192510396, 0, 0.0884921923, 0)
+page.Size = UDim2.new(0, 591, 0, 362)
 
-ImageButton.Parent = Toggle
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.Size = UDim2.new(0, 100, 0, 100)
-ImageButton.Image = "http://www.roblox.com/asset/?id=9261490646"
+autofarm.Name = "autofarm"
+autofarm.Parent = page
+autofarm.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+autofarm.BorderColor3 = Color3.fromRGB(170, 170, 255)
+autofarm.BorderSizePixel = 4
+autofarm.Position = UDim2.new(-0.0125602484, 0, -0.0193730593, 0)
+autofarm.Size = UDim2.new(0, 591, 0, 367)
+
+TextLabel.Parent = autofarm
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(9.16043718e-05, 0, 0.00579576194, 0)
+TextLabel.Size = UDim2.new(0, 361, 0, 34)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Auto Farm | Server X  Hub"
+TextLabel.TextColor3 = Color3.fromRGB(170, 170, 255)
+TextLabel.TextSize = 41.000
+TextLabel.TextWrapped = true
+
+stats.Name = "stats"
+stats.Parent = page
+stats.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+stats.BorderColor3 = Color3.fromRGB(170, 170, 255)
+stats.BorderSizePixel = 4
+stats.Position = UDim2.new(-0.00240790844, 0, -0.0102729499, 0)
+stats.Size = UDim2.new(0, 591, 0, 367)
+
+TextLabel_2.Parent = stats
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(9.16043718e-05, 0, 0.00579576194, 0)
+TextLabel_2.Size = UDim2.new(0, 361, 0, 34)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Stats | Server X  Hub"
+TextLabel_2.TextColor3 = Color3.fromRGB(170, 170, 255)
+TextLabel_2.TextSize = 41.000
+TextLabel_2.TextWrapped = true
+
+Team_2.Name = "Team"
+Team_2.Parent = page
+Team_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Team_2.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Team_2.BorderSizePixel = 4
+Team_2.Position = UDim2.new(-0.007483989, 0, -0.00605773926, 0)
+Team_2.Size = UDim2.new(0, 591, 0, 367)
+
+TextLabel_3.Parent = Team_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(9.16043718e-05, 0, 0.00579576194, 0)
+TextLabel_3.Size = UDim2.new(0, 361, 0, 34)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Team | Server X  Hub"
+TextLabel_3.TextColor3 = Color3.fromRGB(170, 170, 255)
+TextLabel_3.TextSize = 41.000
+TextLabel_3.TextWrapped = true
+
+teleport.Name = "teleport"
+teleport.Parent = page
+teleport.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+teleport.BorderColor3 = Color3.fromRGB(170, 170, 255)
+teleport.BorderSizePixel = 4
+teleport.Position = UDim2.new(-0.00748407841, 0, -0.0165354759, 0)
+teleport.Size = UDim2.new(0, 591, 0, 367)
+
+TextLabel_4.Parent = teleport
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(9.16043718e-05, 0, 0.00579576194, 0)
+TextLabel_4.Size = UDim2.new(0, 361, 0, 34)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Teleport  | Server X  Hub"
+TextLabel_4.TextColor3 = Color3.fromRGB(170, 170, 255)
+TextLabel_4.TextSize = 41.000
+TextLabel_4.TextWrapped = true
+
+devilfruit.Name = "devilfruit"
+devilfruit.Parent = page
+devilfruit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+devilfruit.BorderColor3 = Color3.fromRGB(170, 170, 255)
+devilfruit.BorderSizePixel = 4
+devilfruit.Position = UDim2.new(-0.0176362395, 0, -0.0147604942, 0)
+devilfruit.Size = UDim2.new(0, 591, 0, 367)
+
+TextLabel_5.Parent = devilfruit
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(9.16043718e-05, 0, 0.00579576194, 0)
+TextLabel_5.Size = UDim2.new(0, 361, 0, 34)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Devil Fruit  | Server X  Hub"
+TextLabel_5.TextColor3 = Color3.fromRGB(170, 170, 255)
+TextLabel_5.TextSize = 41.000
+TextLabel_5.TextWrapped = true
+
+Misc_2.Name = "Misc"
+Misc_2.Parent = page
+Misc_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Misc_2.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Misc_2.BorderSizePixel = 4
+Misc_2.Position = UDim2.new(-0.0176363587, 0, -0.0179955959, 0)
+Misc_2.Size = UDim2.new(0, 591, 0, 367)
+
+TextLabel_6.Parent = Misc_2
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(9.16043718e-05, 0, 0.00579576194, 0)
+TextLabel_6.Size = UDim2.new(0, 361, 0, 34)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Misc  | Server X  Hub"
+TextLabel_6.TextColor3 = Color3.fromRGB(170, 170, 255)
+TextLabel_6.TextSize = 41.000
+TextLabel_6.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = page
+Settings.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderColor3 = Color3.fromRGB(170, 170, 255)
+Settings.BorderSizePixel = 4
+Settings.Position = UDim2.new(-0.0106522357, 0, -0.0166631043, 0)
+Settings.Size = UDim2.new(0, 591, 0, 367)
+
+TextLabel_7.Parent = Settings
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(9.16043718e-05, 0, 0.00579576194, 0)
+TextLabel_7.Size = UDim2.new(0, 361, 0, 34)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "Setting | Server X  Hub"
+TextLabel_7.TextColor3 = Color3.fromRGB(170, 170, 255)
+TextLabel_7.TextSize = 41.000
+TextLabel_7.TextWrapped = true
+
+dev.Name = "dev"
+dev.Parent = page
+dev.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+dev.BorderColor3 = Color3.fromRGB(170, 170, 255)
+dev.BorderSizePixel = 4
+dev.Position = UDim2.new(-0.00748407841, 0, -0.0221505761, 0)
+dev.Size = UDim2.new(0, 591, 0, 367)
+
+TextLabel_8.Parent = dev
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(9.16043718e-05, 0, 0.00579576194, 0)
+TextLabel_8.Size = UDim2.new(0, 361, 0, 34)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "Dev | Server X  Hub"
+TextLabel_8.TextColor3 = Color3.fromRGB(170, 170, 255)
+TextLabel_8.TextSize = 41.000
+TextLabel_8.TextWrapped = true
+
+-- Scripts:
+
+local function BPVEYS_fake_script() -- AutoFarm.LocalScript 
+	local script = Instance.new('LocalScript', AutoFarm)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.page.autofarm.Visible = true
+		script.Parent.Parent.page.teleport.Visible = false
+		script.Parent.Parent.page.Misc.Visible = false
+		script.Parent.Parent.page.devilfruit.Visible = false
+		script.Parent.Parent.page.stats.Visible = false
+		script.Parent.Parent.page.Team.Visible = false
+		script.Parent.Parent.page.Setting.Visible = false
+		script.Parent.Parent.page.dev.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(BPVEYS_fake_script)()
